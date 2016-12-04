@@ -6,16 +6,77 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="grid-basic-page page-about">
 
-  <ion-fab #myFabContainer left bottom>
+  <ion-row class="header">
+    <ion-col width-20 center>
+      <img class="img-profile" src="assets/img/1985JeepScramblerProfile.jpg" />
+    </ion-col>
+    <ion-col width-80 class="title" center>
+      1982 Jeep Scrambler
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="subHeader">
+    <ion-col width-25 offset-50 bottom class="subTitle">
+      Year:
+    </ion-col>
+    <ion-col width-25 bottom class="subDetails">
+      1982
+    </ion-col>
+  </ion-row>
+  <ion-row class="subHeader">
+    <ion-col width-25 offset-50 bottom class="subTitle">
+      Mileage:
+    </ion-col>
+    <ion-col bottom class="subDetails">
+      102,926 Miles
+    </ion-col>
+  </ion-row>
+  <ion-row class="detailsSection">
+    <ion-col>
+      Details:
+    </ion-col>
+    <ion-col>
+      Heres a rare final-year 1985 Jeep CJ8 Scrambler 4x4 that's nicely presented with plenty of great personally touches to really standout.
+      But what you like best of all is the fact that something this distinguished is also so affordable. The Scrambler is one of those Jeeps
+      that everyone likes to see. It takes the iconic lines of the CJs and gives it the longest body of the series. While the looks are
+      unmistakably Jeep, it is also quite rare. There were only 1,050 example produced in 1987, the Scramblers final year. Now just imagine
+      how many vehicles have survived the last three decades to look this complete and nice. Its a true two-tone setup with the red and the
+      black used as interesting accents against each other, like on the headlight surrounds or 15-inch wheels. Look closely at this total
+      package, it has some great
+      features for utility such as the auxiliary lights on the bumper, side steps, trailer hitch, and vent covers on the removable doors.
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="footer">
+    <ion-col>
+      <img src="assets/img/1985JeepScramblerSideView.jpg" />
+    </ion-col>
+  </ion-row>
+
+  <ion-fab #myFabContainer1 right top>
+    <button ion-fab color="dark"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <ion-fab-list #myFabList side="left">
+      <button ion-fab (click)="toastToSocialMedia1('bottom', 'Facebook', myFabContainer2)"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab (click)="toastToSocialMedia1('middle', 'Twitter', myFabContainer2)"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab (click)="toastToSocialMedia1('middle', 'Vimeo', myFabContainer2)"><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab (click)="toastToSocialMedia1('top', 'Google Plus', myFabContainer2)"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab #myFabContainer2 left bottom>
     <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
     <ion-fab-list #myFabList side="top">
-      <button ion-fab (click)="toastToSocialMedia('bottom', 'Facebook')"><ion-icon name="logo-facebook"></ion-icon></button>
-      <button ion-fab (click)="toastToSocialMedia('middle', 'Twitter')"><ion-icon name="logo-twitter"></ion-icon></button>
-      <button ion-fab (click)="toastToSocialMedia('middle', 'Vimeo')"><ion-icon name="logo-vimeo"></ion-icon></button>
-      <button ion-fab (click)="toastToSocialMedia('top', 'Google Plus')"><ion-icon name="logo-googleplus"></ion-icon></button>
+      <button ion-fab (click)="toastToSocialMedia2('bottom', 'Facebook')"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab (click)="toastToSocialMedia2('middle', 'Twitter')"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab (click)="toastToSocialMedia2('middle', 'Vimeo')"><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab (click)="toastToSocialMedia2('top', 'Google Plus')"><ion-icon name="logo-googleplus"></ion-icon></button>
     </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab #myFabContainer3 bottom right>
+    <button ion-fab color="blue" (click)="showAddModal()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
 </ion-content>

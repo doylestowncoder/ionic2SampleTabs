@@ -10,12 +10,26 @@ import { ToastController } from 'ionic-angular';
   templateUrl: 'about.html'
 })
 export class AboutPage {
-  @ViewChild('myFabContainer') fabContainer: FabContainer;
+  @ViewChild('myFabContainer2') fabContainer2: FabContainer;
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
 
   }
 
-  toastToSocialMedia(position:string, socialSite:string) {
+  toastToSocialMedia1(position:string, socialSite:string, fab: FabContainer) {
+    console.log('Toasting away...');
+    var message = 'Mmmm, you buttered my toast on ' + socialSite;
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 2000,
+      position: position
+    });
+
+    toast.present(toast);
+
+    fab.close();
+  }
+
+  toastToSocialMedia2(position:string, socialSite:string) {
     console.log('Toasting away...');
     var message = 'Mmmm, you buttered my toast on ' + socialSite;
     let toast = this.toastCtrl.create({
@@ -30,6 +44,11 @@ export class AboutPage {
 
     toast.present(toast);
 
-    this.fabContainer.close();
+    this.fabContainer2.close();
   }
+
+  showAddModal() {
+    alert('Under Construction!!!')
+  }
+
 }

@@ -1,3 +1,58 @@
 page-about {
+  .header {
+    background-color: midnightblue;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
 
+  .title {
+    color: #fff;
+    font-size: 1.5em;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  };
+
+  .subHeader {
+    background-color: midnightblue;
+  }
+
+  .subHeaderFooter {
+    background-color: midnightblue;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .subTitle {
+    color: #fff;
+    font-size: 1.1em;
+  }
+
+  .subDetails {
+    color: #fff;
+    font-size: 0.9em;
+  }
+
+  .img-profile {
+    border-radius: 45px;
+  }
+
+  .detailsSection {
+    color: midnightblue;
+    background: #f2f5f6; /* Old browsers */
+    background: -moz-linear-gradient(top, #f2f5f6 0%, #e3eaed 40%, #c8d7dc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f2f5f6 0%,#e3eaed 40%,#c8d7dc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f2f5f6 0%,#e3eaed 40%,#c8d7dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .footer {
+    background-color: midnightblue;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
 }
+
