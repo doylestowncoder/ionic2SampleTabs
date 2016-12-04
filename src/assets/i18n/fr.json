@@ -1,0 +1,20 @@
+{
+  "TEST":  "Bienvenue, {{ user }}!",
+  "HOME": {
+    "NAVBAR": "Bienvenue, {{ user }}!",
+    "TAB": "Accueil",
+    "TITLE": "Bonjour {{ user }}! Bienvenue à la rencontre Philly Ionic!",
+    "MESSAGE": "Merci à Jedi et à Webjunto pour l'organisation de cet événement! Par ailleurs, ils développent des applications Web et mobiles impressionnantes.",
+    "MESSAGE_COUNT": "Vous avez {{msgCount}} messages à lire."
+  },
+  "ABOUT": {
+    "NAVBAR": "À propos de My App",
+    "TAB": "Sur",
+    "TITLE": "Exemple d'internationalisation"
+  },
+  "CONTACT": {
+    "NAVBAR": "Contactez nous",
+    "TAB": "Contact",
+    "TITLE": "Suivez-nous sur Twitter"
+  }
+}

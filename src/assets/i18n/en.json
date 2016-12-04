@@ -1,0 +1,23 @@
+{
+  "TEST":  "Welcome, {{ user }}!",
+  "HOME": {
+    "NAVBAR": "Welcome, {{ user }}!",
+    "TAB": "Home",
+    "TITLE": "Hello {{ user }}!  Welcome, to the Philly Ionic Meetup!",
+    "MESSAGE": "Special thanks to Jedi and Webjunto for hosting this event!  Btw, they develop awesome web and mobile apps.",
+    "MESSAGE_COUNT": "You have {{ msgCount }} messages to read."
+  },
+  "ABOUT": {
+    "NAVBAR": "About My App",
+    "TAB": "About",
+    "TITLE": "Sample Internationalization",
+    "MESSAGE": "",
+    "COMPLEX": ""
+  },
+  "CONTACT": {
+    "NAVBAR": "Contact Us",
+    "TAB": "Contact",
+    "TITLE": "Welcome to the Philly Ionic Meetup!",
+    "MESSAGE": "Special thanks to Jedi and Webjunto for hosting this event!  Btw, they develop awesome web and mobbile apps."
+  }
+}

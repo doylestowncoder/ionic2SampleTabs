@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ 'ABOUT.NAVBAR' | translate }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-fab #myFabContainer left bottom>
+    <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
+    <ion-fab-list #myFabList side="top">
+      <button ion-fab (click)="toastToSocialMedia('bottom', 'Facebook')"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab (click)="toastToSocialMedia('middle', 'Twitter')"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab (click)="toastToSocialMedia('middle', 'Vimeo')"><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab (click)="toastToSocialMedia('top', 'Google Plus')"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

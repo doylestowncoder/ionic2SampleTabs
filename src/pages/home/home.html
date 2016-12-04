@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ 'HOME.NAVBAR' | translate:{ user: user } }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="pushPage()">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>{{ 'HOME.TITLE' | translate:{ user: user } }}</h2>
+  <p>
+    {{ 'HOME.MESSAGE' | translate }}
+  </p>
+  <p>
+    {{ 'HOME.MESSAGE_COUNT' | translate:{ msgCount: 22 } }}
+  </p>
+  <p>
+    {{ 'HOME.MESSAGE_COUNT' | translate:{ msgCount: messageCount } }}
+  </p>
+</ion-content>
