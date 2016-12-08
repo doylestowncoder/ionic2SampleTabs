@@ -11,6 +11,8 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TourPage } from '../pages/tour/tour';
 
+import {BubbleChartComponent} from './bubbleChart.component';
+
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
 }
@@ -21,7 +23,8 @@ export function createTranslateLoader(http: Http) {
     ContactPage,
     HomePage,
     TabsPage,
-    TourPage
+    TourPage,
+    BubbleChartComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp),

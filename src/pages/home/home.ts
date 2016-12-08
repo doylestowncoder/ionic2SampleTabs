@@ -12,6 +12,7 @@ import { TourPage } from '../tour/tour';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  chartData: Array<any>;
   messageCount: number = 32;
   user: string = 'Ionites';
 
@@ -24,6 +25,8 @@ export class HomePage {
       var x: string = translate.instant('HOME.TAB', {user: 'world'});
       console.log('instant:' + x);
     });
+
+    this.generateData();
   }
 
   pushPage(){
@@ -33,5 +36,15 @@ export class HomePage {
     //this.navCtrl.push(TourPage);
     let modal = this.modalCtrl.create(TourPage);
     modal.present();
+  }
+
+  generateData() {
+    this.chartData = [];
+    for (let i = 0; i < 9; i++) {
+      this.chartData.push([
+        `Index ${i}`,
+        Math.floor(Math.random() * 10)
+      ]);
+    }
   }
 }

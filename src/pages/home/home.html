@@ -20,4 +20,10 @@
   <p>
     {{ 'HOME.MESSAGE_COUNT' | translate:{ msgCount: messageCount } }}
   </p>
+
+  <bubble-chart *ngIf="chartData" [data]="chartData"></bubble-chart>
+
+  <p>
+    {{ 'HOME.MESSAGE_COUNT' | translate:{ msgCount: messageCount } }}
+  </p>
 </ion-content>
