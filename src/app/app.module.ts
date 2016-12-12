@@ -6,6 +6,7 @@ import { TranslateStaticLoader, TranslateLoader } from 'ng2-translate/ng2-transl
 
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
+import { BarcodePage } from '../pages/barcode/barcode';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -20,6 +21,7 @@ export function createTranslateLoader(http: Http) {
   declarations: [
     MyApp,
     AboutPage,
+    BarcodePage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -39,6 +41,7 @@ export function createTranslateLoader(http: Http) {
   entryComponents: [
     MyApp,
     AboutPage,
+    BarcodePage,
     ContactPage,
     HomePage,
     TabsPage,
