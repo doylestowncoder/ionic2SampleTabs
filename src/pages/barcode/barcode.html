@@ -16,6 +16,14 @@
 <ion-content padding>
   <button ion-button (click)="scanBarcode()">Scan</button>
 
-  <span>{{upcCode}}</span>
+  <span>{{barcodeValue}}</span>
+  <span>{{barcodeFormat}}</span>
+  <span>{{errorMessage}}</span>
+
+
+  <button ion-button (click)="scanPDF417Barcode()">Scan</button>
+
+  <span>{{barcodePDF417Value}}</span>
+  <span>{{barcodePDF417Format}}</span>
   <span>{{errorMessage}}</span>
 </ion-content>

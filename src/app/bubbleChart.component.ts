@@ -38,11 +38,11 @@ export class BubbleChartComponent {
 
   createChart() {
     let element = this.chartContainer.nativeElement;
-    this.width = 350 //element.offsetWidth - this.margin.left - this.margin.right;
-    this.height = 500 //element.offsetHeight - this.margin.top - this.margin.bottom;
+    this.width = element.offsetWidth - this.margin.left - this.margin.right;
+    this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
     let svg = d3.select(element).append('svg')
-      .attr('width', 350)
-      .attr('height', 350);
+      .attr('width', element.offsetWidth)
+      .attr('height', element.offsetHeight);
 
     // chart plot area
     this.chart = svg.append('g')
@@ -91,7 +91,12 @@ export class BubbleChartComponent {
       .attr('y', d => this.yScale(d[1]))
       .attr('width', d => this.xScale.bandwidth())
       .attr('height', d => this.height - this.yScale(d[1]))
-      .style('fill', (d, i) => this.colors(i));
+      .style('fill', (d, i) => this.colors(i))
+      .on('touchstart', function (d, i) {
+        console.log('Testing tapping...')
+        alert('Do something cool here!!!');
+      });
+
 
     // add new bars
     update
@@ -103,6 +108,10 @@ export class BubbleChartComponent {
       .attr('width', this.xScale.bandwidth())
       .attr('height', 0)
       .style('fill', (d, i) => this.colors(i))
+      .on('click', function (d, i) {
+        console.log('Testing tapping...')
+        alert('Do something cool here!!!');
+      })
       .transition()
       .delay((d, i) => i * 10)
       .attr('y', d => this.yScale(d[1]))
