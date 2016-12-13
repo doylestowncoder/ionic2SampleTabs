@@ -13,17 +13,46 @@
 </ion-header>
 
 
-<ion-content padding>
-  <button ion-button (click)="scanBarcode()">Scan</button>
-
-  <span>{{barcodeValue}}</span>
-  <span>{{barcodeFormat}}</span>
-  <span>{{errorMessage}}</span>
-
-
-  <button ion-button (click)="scanPDF417Barcode()">Scan</button>
-
-  <span>{{barcodePDF417Value}}</span>
-  <span>{{barcodePDF417Format}}</span>
-  <span>{{errorMessage}}</span>
+<ion-content padding class="grid-basic-page">
+  <ion-row>
+    <ion-col>{{errorMessage}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><hr></ion-col>
+  </ion-row>
+  <ion-row class="header">
+    <ion-col width-67 class="title">
+      Scan a barcode:
+    </ion-col>
+    <ion-col width-33 bottom>
+      <button ion-button (click)="scanBarcode()" class="floatRight">Scan</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col width-50 >
+      Barcode:  {{barcodeValue}}
+    </ion-col>
+    <ion-col width-50 >
+      Format:  {{barcodeFormat}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><hr></ion-col>
+  </ion-row>
+  <ion-row class="header">
+    <ion-col width-67 class="title">
+      Scan a PDF417 barcode:
+    </ion-col>
+    <ion-col width-33 bottom>
+      <button ion-button (click)="scanPDF417Barcode()" class="floatRight">Scan</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col width-50 >
+      Barcode:  {{barcodePDF417Value}}
+    </ion-col>
+    <ion-col width-50 >
+      Format:  {{barcodePDF417Format}}
+    </ion-col>
+  </ion-row>
 </ion-content>

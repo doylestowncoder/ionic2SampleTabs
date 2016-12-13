@@ -91,12 +91,7 @@ export class BubbleChartComponent {
       .attr('y', d => this.yScale(d[1]))
       .attr('width', d => this.xScale.bandwidth())
       .attr('height', d => this.height - this.yScale(d[1]))
-      .style('fill', (d, i) => this.colors(i))
-      .on('touchstart', function (d, i) {
-        console.log('Testing tapping...')
-        alert('Do something cool here!!!');
-      });
-
+      .style('fill', (d, i) => this.colors(i));
 
     // add new bars
     update
@@ -108,9 +103,9 @@ export class BubbleChartComponent {
       .attr('width', this.xScale.bandwidth())
       .attr('height', 0)
       .style('fill', (d, i) => this.colors(i))
-      .on('click', function (d, i) {
+      .on('touchstart', function (d, i) {
         console.log('Testing tapping...')
-        alert('Do something cool here!!!');
+        alert('Do something cool here (SelectAll)!!!' + JSON.stringify(d) + ' ' + JSON.stringify(i));
       })
       .transition()
       .delay((d, i) => i * 10)
