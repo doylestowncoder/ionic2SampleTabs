@@ -22,7 +22,7 @@ node_modules/
 tmp/
 temp/
 platforms/
-www/
+/www/
 $RECYCLE.BIN/
 
 .DS_Store
