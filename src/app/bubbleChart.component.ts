@@ -93,6 +93,8 @@ export class BubbleChartComponent {
       .attr('height', d => this.height - this.yScale(d[1]))
       .style('fill', (d, i) => this.colors(i));
 
+    let element = this.chartContainer.nativeElement;
+
     // add new bars
     update
       .enter()
@@ -103,9 +105,14 @@ export class BubbleChartComponent {
       .attr('width', this.xScale.bandwidth())
       .attr('height', 0)
       .style('fill', (d, i) => this.colors(i))
-      .on('touchstart', function (d, i) {
-        console.log('Testing tapping...')
+      .on('click', function (d, i) {
+        console.log('Testing tapping...');
         alert('Do something cool here (SelectAll)!!!' + JSON.stringify(d) + ' ' + JSON.stringify(i));
+        //var w = d3.select(element);
+          //.on("click", function(e){
+          //  alert('Do something cool here (SelectAll)!!!' + JSON.stringify(d) + ' ' + JSON.stringify(i));
+          //})
+        d3.event.preventDefault(); // disable text dragging
       })
       .transition()
       .delay((d, i) => i * 10)

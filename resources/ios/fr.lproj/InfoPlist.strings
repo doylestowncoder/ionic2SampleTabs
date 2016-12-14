@@ -1,0 +1,10 @@
+/*
+  InfoPlist.strings
+  TDMySpend
+
+  Created by Christopher Schmidt on 8/5/15.
+
+*/
+"CFBundleDisplayName" = "Bonjour";
+
+"CFBundleName" = "Bonjour";
